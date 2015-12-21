@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>忘記密碼</title>
+	<script>
+		
+		function submitXD(){
+			var account = document.getElementById("account").value;
+			var email = document.getElementById("email").value;
+				
+			if (account==""){
+				alert("帳號不得為空!");
+			}
+			else if (email).value==""){
+				alert("Email 不得為空!");
+			}
+			else{
+				document.form1.submit();
+			}
+
+		}
+		
+		
+	</script>
+	
+	<style>
+		body{
+			font-family:微軟正黑體;
+		}
+	</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<h2>忘記密碼</h2>
+	<form name="form1" id="form1" method="post" action="server.php" >
+	
+		帳號 : <input type="text" name="account" id="account" > <br>
+		信箱 : <input type="email" name="email" id="email"><br>
+		
+		<button type="reset" >清空表格</button>
+		<button onclick="submitXD(); return 0;">重置密碼</button>
+		
+	</form>
+</body>
+
+</html>
