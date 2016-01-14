@@ -6,10 +6,10 @@ require('function.php');
 		
 		$response = $_POST['g-recaptcha-response'];
 		if (!recaptcha_vertify($response))
-			$errRecaptcha = "<div class='alert alert-dangar'>請驗證是否為機器人！</div>";
+			$errRecaptcha = "<div class='alert alert-danger'>請驗證是否為機器人！</div>";
 				
 		if(!$_POST["email"] || !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL))
-			$errEmail = "<div class='alert alert-dangar'>電子郵件格式有誤！請重試一次！</div>";
+			$errEmail = "<div class='alert alert-danger'>電子郵件格式有誤！請重試一次！</div>";
 		
 		if( !$errRecaptcha && !$errEmail){
 			connect_phpBB();
@@ -25,10 +25,10 @@ require('function.php');
 				if(!$Message)
 					$Message = "<div class='alert alert-success'>救援成功！已將帳號寄至您的信箱！</div>";
 				else
-					$Message = "<div class='alert alert-dangar'>系統發生錯誤！請通知管理員！</div>"; 
+					$Message = "<div class='alert alert-danger'>系統發生錯誤！請通知管理員！</div>"; 
 			}
 			else{
-				$Message = "<div class='alert alert-dangar'>查無此Email紀錄！</div>";	
+				$Message = "<div class='alert alert-danger'>查無此Email紀錄！</div>";	
 			}
 			
 		}					

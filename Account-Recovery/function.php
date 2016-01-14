@@ -5,9 +5,9 @@
 
 function connect_phpBB(){
 	$servername = "127.0.0.1";	//資料庫位址
-	$username = "admin_phpbb";	//資料庫帳號
-	$password = "sSzBT1TU96";	//資料庫密碼
-	$dbname = "admin_phpbb";	//資料庫名稱
+	$username = "phpbb";		//資料庫帳號
+	$password = "";				//資料庫密碼
+	$dbname = "phpbb";			//資料庫名稱
 	$conn = mysql_connect($servername, $username, $password);
 	mysql_query("SET NAMES 'utf8'");
 	mysql_select_db($dbname);	
@@ -33,8 +33,8 @@ function recaptcha_display(){
 function mail2user($account,$email){
 	include("class.phpmailer.php"); //匯入PHPMailer類別
 ////////////////////////////////////////////////////////////	
-	$gmail_Account="becoder.org@gmail.com";  	//Gmail 帳號
-	$gmail_Password="win123702109q";        			//Gmail 密碼
+	$gmail_Account="@gmail.com";  	//Gmail 帳號
+	$gmail_Password="";        		//Gmail 密碼
 ////////////////////////////////////////////////////////////
 				
 	$mail= new PHPMailer(); //建立新物件
